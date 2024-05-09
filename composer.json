@@ -1,0 +1,29 @@
+{
+  "name": "n2ref/coreui-form",
+  "type": "framework",
+  "description": "PHP framework for web applications",
+  "keywords": [
+    "framework",
+    "coreui",
+    "form"
+  ],
+  "homepage": "https://github.com/n2ref/coreui-form",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "n2ref",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CoreUI\\": "src/",
+      "CoreUI\\Form\\": "src/Form/"
+    }
+  }
+}
