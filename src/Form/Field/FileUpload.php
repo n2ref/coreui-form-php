@@ -28,8 +28,8 @@ class FileUpload extends Abstract\Field {
     protected ?bool   $show_dropzone = null;
     protected ?bool   $autostart     = true;
     protected ?int    $size_limit    = null;
-    protected ?int    $file_limit    = null;
-    protected ?string $layout        = null;
+    protected ?int    $files_limit   = null;
+    protected ?string $file_template = null;
     protected ?array  $extra_fields  = null;
     protected array   $files         = [];
 
@@ -86,11 +86,11 @@ class FileUpload extends Abstract\Field {
 
     /**
      * Установка шаблона загружаемых файлов
-     * @param string|null $layout
+     * @param string|null $template
      * @return self
      */
-    public function setLayout(string $layout = null): self {
-        $this->layout = $layout;
+    public function setFileTemplate(string $template = null): self {
+        $this->file_template = $template;
         return $this;
     }
 
@@ -99,8 +99,8 @@ class FileUpload extends Abstract\Field {
      * Получение шаблона загружаемых файлов
      * @return string|null
      */
-    public function getLayout():? string {
-        return $this->layout;
+    public function getFileTemplate():? string {
+        return $this->file_template;
     }
 
 
@@ -180,7 +180,7 @@ class FileUpload extends Abstract\Field {
      * @return $this
      */
     public function setFilesLimit(int $count = null): self {
-        $this->file_limit = $count;
+        $this->files_limit = $count;
         return $this;
     }
 
@@ -191,7 +191,7 @@ class FileUpload extends Abstract\Field {
      */
     public function getFilesLimit():? int {
 
-        return $this->file_limit;
+        return $this->files_limit;
     }
 
 
@@ -462,13 +462,13 @@ class FileUpload extends Abstract\Field {
             $result['options']['url'] = $this->url;
         }
         if ( ! is_null($this->http_method)) {
-            $result['options']['http_method'] = $this->http_method;
+            $result['options']['httpMethod'] = $this->http_method;
         }
         if ( ! is_null($this->accept)) {
             $result['options']['accept'] = $this->accept;
         }
-        if ( ! is_null($this->file_limit)) {
-            $result['options']['fileLimit'] = $this->file_limit;
+        if ( ! is_null($this->files_limit)) {
+            $result['options']['filesLimit'] = $this->files_limit;
         }
         if ( ! is_null($this->size_limit)) {
             $result['options']['sizeLimit'] = $this->size_limit;
@@ -482,8 +482,11 @@ class FileUpload extends Abstract\Field {
         if ( ! is_null($this->extra_fields)) {
             $result['options']['extraFields'] = $this->extra_fields;
         }
-        if ( ! is_null($this->layout)) {
-            $result['options']['layout'] = $this->layout;
+        if ( ! is_null($this->autostart)) {
+            $result['options']['autostart'] = $this->autostart;
+        }
+        if ( ! is_null($this->file_template)) {
+            $result['options']['templateFile'] = $this->file_template;
         }
         if ($this->files) {
             $files = [];
