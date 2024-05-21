@@ -27,7 +27,7 @@ class File extends Abstract\Field {
      * @param string      $name
      * @param string|null $title
      */
-    private function __construct(string $name, string $title = null) {
+    public function __construct(string $name, string $title = null) {
 
         $this->setName($name);
         $this->setLabel($title);

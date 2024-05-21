@@ -15,7 +15,7 @@ class Hidden extends Abstract\Field {
     /**
      * @param string $name
      */
-    private function __construct(string $name) {
+    public function __construct(string $name) {
 
         $this->setName($name);
     }

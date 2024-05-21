@@ -19,7 +19,7 @@ class Group extends Abstract\Field {
     /**
      * @param string|null $label
      */
-    private function __construct(string $label = null) {
+    public function __construct(string $label = null) {
 
         $this->setLabel($label);
     }

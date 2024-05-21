@@ -27,7 +27,7 @@ class Password extends Abstract\Field {
      * @param string      $name
      * @param string|null $label
      */
-    private function __construct(string $name, string $label = null) {
+    public function __construct(string $name, string $label = null) {
 
         $this->setName($name);
         $this->setLabel($label);
