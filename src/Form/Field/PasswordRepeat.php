@@ -63,7 +63,7 @@ class PasswordRepeat extends Abstract\Field {
     public function toArray(): array {
 
         $result = [
-            'type' => 'text'
+            'type' => 'passwordRepeat'
         ];
 
         if ( ! is_null($this->name)) {
