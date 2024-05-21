@@ -14,7 +14,7 @@ class Dataset extends Abstract\Field {
     use Trait\Description;
     use Trait\WidthLabel;
     use Trait\Required;
-    use Trait\Readonly;
+    use Trait\FieldReadonly;
     use Trait\InvalidText;
     use Trait\ValidText;
     use Trait\OutContent;

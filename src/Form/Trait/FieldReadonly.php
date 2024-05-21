@@ -5,7 +5,7 @@ namespace CoreUI\Form\Trait;
 /**
  *
  */
-trait Readonly {
+trait FieldReadonly {
 
     protected ?bool $readonly = null;
 

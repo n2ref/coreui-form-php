@@ -16,7 +16,7 @@ class Text extends Abstract\Field {
     use Trait\WidthLabel;
     use Trait\Attributes;
     use Trait\Required;
-    use Trait\Readonly;
+    use Trait\FieldReadonly;
     use Trait\InvalidText;
     use Trait\ValidText;
     use Trait\OutContent;

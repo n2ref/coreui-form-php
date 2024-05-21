@@ -12,7 +12,7 @@ class FileUpload extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
-    use Trait\Readonly;
+    use Trait\FieldReadonly;
     use Trait\Required;
     use Trait\WidthLabel;
     use Trait\InvalidText;
