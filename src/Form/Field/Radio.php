@@ -13,7 +13,6 @@ class Radio extends Abstract\Field {
     use Trait\Label;
     use Trait\Description;
     use Trait\WidthLabel;
-    use Trait\Attributes;
     use Trait\Required;
     use Trait\FieldReadonly;
     use Trait\InvalidText;
@@ -81,9 +80,6 @@ class Radio extends Abstract\Field {
         }
         if ( ! is_null($this->position)) {
             $result['position'] = $this->position;
-        }
-        if ( ! is_null($this->attr)) {
-            $result['attr'] = $this->attr;
         }
         if ( ! is_null($this->options_list)) {
             $result['options'] = $this->options_list;
