@@ -25,7 +25,7 @@ trait OptionsSelect {
 
             foreach ($options as $key => $option) {
                 if (is_string($option) || is_numeric($option)) {
-                    $options[] = [
+                    $datalist_items[] = [
                         'value' => $key,
                         'text'  => $option,
                     ];
@@ -34,13 +34,13 @@ trait OptionsSelect {
 
                     if (isset($option['type']) && $option['type'] == 'group') {
                         if ( ! empty($option['options'])) {
-                            $options[] = $option;
+                            $datalist_items[] = $option;
                         }
 
                     } elseif (isset($option['value']) &&
                         (is_string($option['value']) || is_numeric($option['value']))
                     ) {
-                        $options[] = $option;
+                        $datalist_items[] = $option;
                     }
                 }
             }

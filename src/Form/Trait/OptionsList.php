@@ -25,7 +25,7 @@ trait OptionsList {
 
             foreach ($options as $key => $option) {
                 if (is_string($option) || is_numeric($option)) {
-                    $options[] = [
+                    $datalist_items[] = [
                         'value' => $key,
                         'text'  => $option,
                     ];
@@ -34,7 +34,7 @@ trait OptionsList {
                           isset($option['value']) &&
                           (is_string($option['value']) || is_numeric($option['value']))
                 ) {
-                    $options[] = $option;
+                    $datalist_items[] = $option;
                 }
             }
 
