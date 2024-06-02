@@ -20,6 +20,7 @@ class FileUpload extends Abstract\Field {
     use Trait\Fields;
     use Trait\OutContent;
     use Trait\Show;
+    use Trait\NoSend;
 
     protected ?string $url           = '';
     protected ?string $http_method   = null;
@@ -454,6 +455,9 @@ class FileUpload extends Abstract\Field {
         }
         if ( ! is_null($this->position)) {
             $result['position'] = $this->position;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         $result['options'] = [];

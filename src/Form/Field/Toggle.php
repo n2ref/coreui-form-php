@@ -22,6 +22,7 @@ class Toggle extends Abstract\Field {
     use Trait\OutContent;
     use Trait\Show;
     use Trait\Fields;
+    use Trait\NoSend;
 
 
     /**
@@ -83,6 +84,9 @@ class Toggle extends Abstract\Field {
         }
         if ( ! is_null($this->attr)) {
             $result['attr'] = $this->attr;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         if ( ! is_null($this->fields)) {

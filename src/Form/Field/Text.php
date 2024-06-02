@@ -23,6 +23,7 @@ class Text extends Abstract\Field {
     use Trait\Show;
     use Trait\Datalist;
     use Trait\Fields;
+    use Trait\NoSend;
 
 
     /**
@@ -87,6 +88,9 @@ class Text extends Abstract\Field {
         }
         if ( ! is_null($this->attr)) {
             $result['attr'] = $this->attr;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         if ( ! is_null($this->fields)) {

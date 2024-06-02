@@ -22,6 +22,7 @@ class Radio extends Abstract\Field {
     use Trait\Show;
     use Trait\Inline;
     use Trait\Fields;
+    use Trait\NoSend;
 
 
     /**
@@ -83,6 +84,9 @@ class Radio extends Abstract\Field {
         }
         if ( ! is_null($this->options_list)) {
             $result['options'] = $this->options_list;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         if ( ! is_null($this->fields)) {

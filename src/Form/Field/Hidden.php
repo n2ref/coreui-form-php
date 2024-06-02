@@ -10,6 +10,7 @@ use CoreUI\Form\Trait;
 class Hidden extends Abstract\Field {
 
     use Trait\Name;
+    use Trait\NoSend;
 
 
     /**
@@ -33,6 +34,9 @@ class Hidden extends Abstract\Field {
 
         if ( ! is_null($this->name)) {
             $result['name'] = $this->name;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         return $result;

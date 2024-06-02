@@ -23,6 +23,7 @@ class Select extends Abstract\Field {
     use Trait\OptionsSelect;
     use Trait\Show;
     use Trait\Fields;
+    use Trait\NoSend;
 
 
     /**
@@ -87,6 +88,9 @@ class Select extends Abstract\Field {
         }
         if ( ! is_null($this->options_select)) {
             $result['options'] = $this->options_select;
+        }
+        if ( ! is_null($this->no_send)) {
+            $result['noSend'] = $this->no_send;
         }
 
         if ( ! is_null($this->fields)) {
