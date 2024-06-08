@@ -12,7 +12,9 @@ class Textarea extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
+    use Trait\DescriptionHelp;
     use Trait\Width;
+    use Trait\Height;
     use Trait\WidthLabel;
     use Trait\Attributes;
     use Trait\Required;
@@ -58,6 +60,9 @@ class Textarea extends Abstract\Field {
         }
         if ( ! is_null($this->width)) {
             $result['width'] = $this->width;
+        }
+        if ( ! is_null($this->height)) {
+            $result['height'] = $this->height;
         }
         if ( ! is_null($this->width_label)) {
             $result['widthLabel'] = $this->width_label;

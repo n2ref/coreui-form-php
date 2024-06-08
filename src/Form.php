@@ -515,7 +515,9 @@ class Form {
      * @param string|null $position
      * @return self
      */
-	public function addFields(array $fields, string $position = null): self {
+	public function setFields(array $fields, string $position = null): self {
+
+        $this->fields = [];
 
         foreach ($fields as $field) {
             if ($field instanceof Form\Abstract\Field) {
@@ -568,7 +570,9 @@ class Form {
      * @param array $controls
      * @return self
      */
-	public function addControls(array $controls): self {
+	public function setControls(array $controls): self {
+
+        $this->controls = [];
 
         foreach ($controls as $control) {
             if ($control instanceof Form\Abstract\Control) {

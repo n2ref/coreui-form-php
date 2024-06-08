@@ -12,6 +12,7 @@ class Radio extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
+    use Trait\DescriptionHelp;
     use Trait\WidthLabel;
     use Trait\Required;
     use Trait\FieldReadonly;

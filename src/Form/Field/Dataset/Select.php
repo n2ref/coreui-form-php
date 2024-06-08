@@ -10,6 +10,7 @@ class Select extends Type {
 
     use Trait\Attributes;
     use Trait\OptionsList;
+    use Trait\Width;
 
 
     /**
@@ -29,6 +30,9 @@ class Select extends Type {
         }
         if ( ! is_null($this->attr)) {
             $result['attr'] = $this->attr;
+        }
+        if ( ! is_null($this->width)) {
+            $result['width'] = $this->width;
         }
 
         return $result;

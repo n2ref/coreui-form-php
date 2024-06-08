@@ -11,6 +11,13 @@ class Custom extends Abstract\Field {
 
     use Trait\Name;
     use Trait\Label;
+    use Trait\Description;
+    use Trait\DescriptionHelp;
+    use Trait\WidthLabel;
+    use Trait\Required;
+    use Trait\Show;
+    use Trait\Fields;
+    use Trait\NoSend;
 
     protected array|string|int|float|null $content = null;
 

@@ -12,6 +12,7 @@ class Toggle extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
+    use Trait\DescriptionHelp;
     use Trait\WidthLabel;
     use Trait\Attributes;
     use Trait\ValueY;

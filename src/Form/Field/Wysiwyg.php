@@ -12,6 +12,7 @@ class Wysiwyg extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
+    use Trait\DescriptionHelp;
     use Trait\Width;
     use Trait\WidthMin;
     use Trait\WidthMax;

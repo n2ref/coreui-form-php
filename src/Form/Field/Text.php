@@ -12,6 +12,7 @@ class Text extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
+    use Trait\DescriptionHelp;
     use Trait\Width;
     use Trait\WidthLabel;
     use Trait\Attributes;
@@ -34,6 +35,19 @@ class Text extends Abstract\Field {
 
         $this->setName($name);
         $this->setLabel($label);
+    }
+
+
+    /**
+     * Установка шаблона для валидации
+     * @param string $pattern
+     * @return self
+     */
+    public function setValidPattern(string $pattern): self {
+
+        $this->setAttr('pattern', $pattern);
+
+        return $this;
     }
 
 

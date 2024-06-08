@@ -15,7 +15,7 @@ trait Attributes {
      * @param string $value
      * @return self
      */
-    public function setAttr(string $name, string $value): self {
+    public function setAttr(string $name, string $value = ''): self {
 
         if (is_null($this->attr)) {
             $this->attr = [];
@@ -33,7 +33,7 @@ trait Attributes {
      * @param string $value
      * @return self
      */
-    public function setAttrPrepend(string $name, string $value): self {
+    public function setAttrPrepend(string $name, string $value = ''): self {
 
         if (is_null($this->attr)) {
             $this->attr = [];
@@ -53,7 +53,7 @@ trait Attributes {
      * @param string $value
      * @return self
      */
-    public function setAttrAppend(string $name, string $value): self {
+    public function setAttrAppend(string $name, string $value = ''): self {
 
         if (is_null($this->attr)) {
             $this->attr = [];

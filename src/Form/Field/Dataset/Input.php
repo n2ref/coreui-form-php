@@ -9,6 +9,7 @@ use CoreUI\Form\Trait;
 class Input extends Type {
 
     use Trait\Attributes;
+    use Trait\Width;
 
     protected string $type;
 
@@ -40,6 +41,9 @@ class Input extends Type {
 
         if ( ! is_null($this->attr)) {
             $result['attr'] = $this->attr;
+        }
+        if ( ! is_null($this->width)) {
+            $result['width'] = $this->width;
         }
 
         return $result;
