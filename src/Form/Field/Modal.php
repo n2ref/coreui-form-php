@@ -210,6 +210,9 @@ class Modal extends Abstract\Field {
         if ( ! is_null($this->label)) {
             $result['label'] = $this->label;
         }
+        if ( ! is_null($this->description_help)) {
+            $result['descriptionHelp'] = $this->description_help;
+        }
         if ( ! is_null($this->description)) {
             $result['description'] = $this->description;
         }
