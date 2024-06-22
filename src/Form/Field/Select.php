@@ -26,6 +26,7 @@ class Select extends Abstract\Field {
     use Trait\Show;
     use Trait\Fields;
     use Trait\NoSend;
+    use Trait\Multiple;
 
 
     /**
@@ -99,6 +100,9 @@ class Select extends Abstract\Field {
         }
         if ( ! is_null($this->no_send)) {
             $result['noSend'] = $this->no_send;
+        }
+        if ( ! is_null($this->multiple) && $this->multiple) {
+            $result['attr']['multiple'] = 'multiple';
         }
 
         if ( ! is_null($this->fields)) {
