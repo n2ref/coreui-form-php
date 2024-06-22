@@ -19,7 +19,8 @@ class FileUpload extends Abstract\Field {
     use Trait\InvalidText;
     use Trait\ValidText;
     use Trait\Fields;
-    use Trait\OutContent;
+    use Trait\Prefix;
+    use Trait\Suffix;
     use Trait\Show;
     use Trait\NoSend;
 
@@ -451,8 +452,11 @@ class FileUpload extends Abstract\Field {
         if ( ! is_null($this->valid_text)) {
             $result['valid_text'] = $this->valid_text;
         }
-        if ( ! is_null($this->out_content)) {
-            $result['outContent'] = $this->out_content;
+        if ( ! is_null($this->prefix)) {
+            $result['prefix'] = $this->prefix;
+        }
+        if ( ! is_null($this->suffix)) {
+            $result['suffix'] = $this->suffix;
         }
         if ( ! is_null($this->show)) {
             $result['show'] = $this->show;
