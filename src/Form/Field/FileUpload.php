@@ -163,7 +163,7 @@ class FileUpload extends Abstract\Field {
      * @return self
      */
     public function setAcceptZip(): self {
-        $this->accept = 'application/zip';
+        $this->accept = 'application/zip, application/zip-compressed, application/x-zip-compressed, multipart/x-zip, application/octet-stream';
         return $this;
     }
 
