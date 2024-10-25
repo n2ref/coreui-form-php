@@ -12,7 +12,8 @@ class Radio extends Abstract\Field {
     use Trait\Name;
     use Trait\Label;
     use Trait\Description;
-    use Trait\DescriptionHelp;
+    use Trait\DescriptionLabel;
+    use Trait\Help;
     use Trait\WidthLabel;
     use Trait\Required;
     use Trait\FieldReadonly;
@@ -54,11 +55,14 @@ class Radio extends Abstract\Field {
         if ( ! is_null($this->label)) {
             $result['label'] = $this->label;
         }
-        if ( ! is_null($this->description_help)) {
-            $result['descriptionHelp'] = $this->description_help;
+        if ( ! is_null($this->help)) {
+            $result['help'] = $this->help;
         }
         if ( ! is_null($this->description)) {
             $result['description'] = $this->description;
+        }
+        if ( ! is_null($this->description_label)) {
+            $result['descriptionLabel'] = $this->description_label;
         }
         if ( ! is_null($this->required)) {
             $result['required'] = $this->required;
